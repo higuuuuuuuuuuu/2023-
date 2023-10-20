@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void) 
+{
+    //肉じゃがを作ります
+    printf("\n肉じゃがの作り方\n\n使用食材\n");
+    printf("ジャガイモ　3 \nにんじん　1");
+    return 0;
+}
