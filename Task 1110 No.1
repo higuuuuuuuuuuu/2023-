@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int max = 10000;
+
+	for (int a = 1; a <= max; a++);
+	{
+		if (a % 13 == 0)
+		{
+			printf("13で割り切れる数字%d\n", a);
+		}
+		else if (a % 17 == 0)
+		{
+			printf("17で割り切れる数字%d\n", a);
+		}
+	}
+
+	return 0;
+}
