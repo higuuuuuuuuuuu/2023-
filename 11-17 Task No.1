@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+	char d;
+	printf("入力");
+	scanf_s("%c", &d);
+	if (d >= 'A' && d <= 'Z')
+		printf("大文字を含む\n");
+	if (d >= 'a' && d <= 'z')
+		printf("大文字を含まない\n");
+	return 0;
+}
