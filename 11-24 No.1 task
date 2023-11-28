@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char a[90];
+	printf("パスワードを入力してください。");
+	scanf("%s",a);
+	
+	int big=0;
+	int length=strlen(a);
+	for (int i=0; i<length;i++)
+	{
+	if(a[i]>='A' && a[i]<='Z')
+		{
+		big++;
+		}
+	}
+
+	int small=0;
+	for (int j=0; j<length;j++)
+	{
+	if(a[j]>='a' && a[j]<='z')
+		{
+		small++;
+		}
+	}
+	int other=0;
+	for (int k=0; k<length;k++)
+	{
+	if (!(a[k]>='A' && a[k]<='Z') && !(a[k]>='a' && a[k]<='z'))
+		{
+		other++;
+		}
+	}
+
+	if(strlen(a)>=8 && strlen(a)<=16)
+	{
+	if(big>0 && small>0 && other>0)
+		{
+			printf("パスワードを設定しました。");
+		}	
