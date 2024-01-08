@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c, discriminant, root1, root2;
+
+    do {
+        printf("a、b、cを順に入力してください。");
+        scanf("%lf %lf %lf", &a, &b, &c);
+        if(a == 0) {
+            printf("aが0になってはいけません。もう一度入力してください。\n");
+        }
+    } while(a == 0);
+
+    discriminant = b*b - 4*a*c;
+
+    if (discriminant > 0) {
+        root1 = (-b + sqrt(discriminant)) / (2*a);
+        root2 = (-b - sqrt(discriminant)) / (2*a);
+        printf("解は、%.2lf と %.2lfである。", root1, root2);
+    }
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2*a);
+        printf("解は、 %.2lf と %.2lf である。", root1, root2);
+    }
+    else {
+        double realPart = -b / (2*a);
+        double imagPart = sqrt(-discriminant) / (2*a);
+        printf("解は、 %.2lf+%.2lfi と %.2lf-%.2lfiである。", realPart, imagPart, realPart, imagPart);
+    }
+
+    return 0;
+}
